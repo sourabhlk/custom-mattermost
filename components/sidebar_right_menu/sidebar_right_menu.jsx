@@ -507,7 +507,7 @@ export default class SidebarRightMenu extends React.Component {
                                 />
                             </a>
                         </li>
-                        <li className='divider'/>
+                        {/*<li className='divider'/>
                         <li>
                             <a
                                 href='#'
@@ -560,7 +560,7 @@ export default class SidebarRightMenu extends React.Component {
                                     defaultMessage='Logout'
                                 />
                             </a>
-                        </li>
+                        </li>*/}
                     </ul>
                 </div>
                 <AboutBuildModal

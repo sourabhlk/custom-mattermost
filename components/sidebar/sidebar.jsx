@@ -569,7 +569,7 @@ export default class Sidebar extends React.PureComponent {
                     className='add-channel-btn cursor--pointer style--none'
                     onClick={this.showNewChannelModal.bind(this, Constants.OPEN_CHANNEL)}
                 >
-                    {'+'}
+                  
                 </button>
             </OverlayTrigger>
         );
@@ -586,7 +586,7 @@ export default class Sidebar extends React.PureComponent {
                     className='add-channel-btn cursor--pointer style--none'
                     onClick={this.showNewChannelModal.bind(this, Constants.PRIVATE_CHANNEL)}
                 >
-                    {'+'}
+                  
                 </button>
             </OverlayTrigger>
         );
@@ -606,7 +606,7 @@ export default class Sidebar extends React.PureComponent {
                     className='add-channel-btn cursor--pointer style--none'
                     onClick={this.handleOpenMoreDirectChannelsModal}
                 >
-                    {'+'}
+                  
                 </button>
             </OverlayTrigger>
         );
@@ -730,7 +730,7 @@ export default class Sidebar extends React.PureComponent {
                             </h4>
                         </li>
                         {publicChannelItems}
-                        <li>
+                        {/*<li>
                             <button
                                 id='sidebarChannelsMore'
                                 className='nav-more cursor--pointer style--none btn--block'
@@ -741,10 +741,10 @@ export default class Sidebar extends React.PureComponent {
                                     defaultMessage='More...'
                                 />
                             </button>
-                        </li>
+                        </li>*/}
                     </ul>
 
-                    <ul className='nav nav-pills nav-stacked'>
+                  {/*  <ul className='nav nav-pills nav-stacked'>
                         <li>
                             <h4 id='privateChannel'>
                                 <FormattedMessage
@@ -768,7 +768,7 @@ export default class Sidebar extends React.PureComponent {
                         </li>
                         {directMessageItems}
                         {directMessageMore}
-                    </ul>
+                    </ul>*/}
                 </div>
                 <div className='sidebar__switcher'>
                     <button

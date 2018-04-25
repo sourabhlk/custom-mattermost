@@ -320,7 +320,7 @@ export default class Textbox extends React.Component {
                     popoverMentionKeyClick={this.props.popoverMentionKeyClick}
                 />
                 {preview}
-                <div className={'help__text ' + helpTextClass}>
+                {/*<div className={'help__text ' + helpTextClass}>
                     {helpText}
                     {previewLink}
                     <a
@@ -335,7 +335,7 @@ export default class Textbox extends React.Component {
                             defaultMessage='Help'
                         />
                     </a>
-                </div>
+                </div>*/}
             </div>
         );
     }

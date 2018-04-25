@@ -682,14 +682,6 @@ export default class Navbar extends React.Component {
                             {webrtcOption}
                             {viewPinnedPostsOption}
                             {notificationPreferenceOption}
-                            {addMembersOption}
-                            {manageMembersOption}
-                            {setChannelHeaderOption}
-                            {setChannelPurposeOption}
-                            {renameChannelOption}
-                            {deleteChannelOption}
-                            {leaveChannelOption}
-                            {toggleFavoriteOption}
                             <div
                                 className='close visible-xs-block'
                                 onClick={this.hideHeaderOverlay}

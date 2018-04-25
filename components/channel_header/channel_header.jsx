@@ -494,24 +494,24 @@ export default class ChannelHeader extends React.Component {
                 </li>
             );
 
-            dropdownContents.push(
-                <li
-                    key='add_members'
-                    role='presentation'
-                >
-                    <button
-                        className='style--none'
-                        id='channelAddMembersGroup'
-                        role='menuitem'
-                        onClick={this.openDirectMessageModal}
-                    >
-                        <FormattedMessage
-                            id='channel_header.addMembers'
-                            defaultMessage='Add Members'
-                        />
-                    </button>
-                </li>
-            );
+            // dropdownContents.push(
+            //     <li
+            //         key='add_members'
+            //         role='presentation'
+            //     >
+            //         <button
+            //             className='style--none'
+            //             id='channelAddMembersGroup'
+            //             role='menuitem'
+            //             onClick={this.openDirectMessageModal}
+            //         >
+            //             <FormattedMessage
+            //                 id='channel_header.addMembers'
+            //                 defaultMessage='Add Members'
+            //             />
+            //         </button>
+            //     </li>
+            // );
         } else {
             dropdownContents.push(
                 <li
@@ -534,24 +534,24 @@ export default class ChannelHeader extends React.Component {
             );
 
             if (this.props.isDefault) {
-                dropdownContents.push(
-                    <li
-                        key='manage_members'
-                        role='presentation'
-                    >
-                        <button
-                            className='style--none'
-                            id='channelManageMembers'
-                            role='menuitem'
-                            onClick={this.showMembersModal}
-                        >
-                            <FormattedMessage
-                                id='channel_header.viewMembers'
-                                defaultMessage='View Members'
-                            />
-                        </button>
-                    </li>
-                );
+                // dropdownContents.push(
+                //     <li
+                //         key='manage_members'
+                //         role='presentation'
+                //     >
+                //         <button
+                //             className='style--none'
+                //             id='channelManageMembers'
+                //             role='menuitem'
+                //             onClick={this.showMembersModal}
+                //         >
+                //             <FormattedMessage
+                //                 id='channel_header.viewMembers'
+                //                 defaultMessage='View Members'
+                //             />
+                //         </button>
+                //     </li>
+                // );
             }
 
             dropdownContents.push(
@@ -574,53 +574,53 @@ export default class ChannelHeader extends React.Component {
             );
 
             if (!this.props.isDefault) {
-                dropdownContents.push(
-                    <li
-                        key='divider-1'
-                        className='divider'
-                    />
-                );
+                // dropdownContents.push(
+                //     <li
+                //         key='divider-1'
+                //         className='divider'
+                //     />
+                // );
 
                 if (ChannelUtils.canManageMembers(channel, isChannelAdmin, isTeamAdmin, isSystemAdmin)) {
-                    dropdownContents.push(
-                        <li
-                            key='add_members'
-                            role='presentation'
-                        >
-                            <ToggleModalButtonRedux
-                                id='channelAddMembers'
-                                ref='channelInviteModalButton'
-                                role='menuitem'
-                                modalId={ModalIdentifiers.CHANNEL_INVITE}
-                                dialogType={ChannelInviteModal}
-                                dialogProps={{channel, currentUser: this.props.currentUser}}
-                            >
-                                <FormattedMessage
-                                    id='channel_header.addMembers'
-                                    defaultMessage='Add Members'
-                                />
-                            </ToggleModalButtonRedux>
-                        </li>
-                    );
+                    // dropdownContents.push(
+                    //     <li
+                    //         key='add_members'
+                    //         role='presentation'
+                    //     >
+                    //         <ToggleModalButtonRedux
+                    //             id='channelAddMembers'
+                    //             ref='channelInviteModalButton'
+                    //             role='menuitem'
+                    //             modalId={ModalIdentifiers.CHANNEL_INVITE}
+                    //             dialogType={ChannelInviteModal}
+                    //             dialogProps={{channel, currentUser: this.props.currentUser}}
+                    //         >
+                    //             <FormattedMessage
+                    //                 id='channel_header.addMembers'
+                    //                 defaultMessage='Add Members'
+                    //             />
+                    //         </ToggleModalButtonRedux>
+                    //     </li>
+                    // );
 
-                    dropdownContents.push(
-                        <li
-                            key='manage_members'
-                            role='presentation'
-                        >
-                            <button
-                                className='style--none'
-                                id='channelManageMembers'
-                                role='menuitem'
-                                onClick={this.showMembersModal}
-                            >
-                                <FormattedMessage
-                                    id='channel_header.manageMembers'
-                                    defaultMessage='Manage Members'
-                                />
-                            </button>
-                        </li>
-                    );
+                    // dropdownContents.push(
+                    //     <li
+                    //         key='manage_members'
+                    //         role='presentation'
+                    //     >
+                    //         <button
+                    //             className='style--none'
+                    //             id='channelManageMembers'
+                    //             role='menuitem'
+                    //             onClick={this.showMembersModal}
+                    //         >
+                    //             <FormattedMessage
+                    //                 id='channel_header.manageMembers'
+                    //                 defaultMessage='Manage Members'
+                    //             />
+                    //         </button>
+                    //     </li>
+                    // );
                 } else {
                     dropdownContents.push(
                         <li
@@ -651,113 +651,113 @@ export default class ChannelHeader extends React.Component {
                     />
                 );
 
-                dropdownContents.push(
-                    <li
-                        key='set_channel_header'
-                        role='presentation'
-                    >
-                        <ToggleModalButtonRedux
-                            id='channelEditHeader'
-                            role='menuitem'
-                            modalId={ModalIdentifiers.EDIT_CHANNEL_HEADER}
-                            dialogType={EditChannelHeaderModal}
-                            dialogProps={{channel}}
-                        >
-                            <FormattedMessage
-                                id='channel_header.setHeader'
-                                defaultMessage='Edit Channel Header'
-                            />
-                        </ToggleModalButtonRedux>
-                    </li>
-                );
+                // dropdownContents.push(
+                //     <li
+                //         key='set_channel_header'
+                //         role='presentation'
+                //     >
+                //         <ToggleModalButtonRedux
+                //             id='channelEditHeader'
+                //             role='menuitem'
+                //             modalId={ModalIdentifiers.EDIT_CHANNEL_HEADER}
+                //             dialogType={EditChannelHeaderModal}
+                //             dialogProps={{channel}}
+                //         >
+                //             <FormattedMessage
+                //                 id='channel_header.setHeader'
+                //                 defaultMessage='Edit Channel Header'
+                //             />
+                //         </ToggleModalButtonRedux>
+                //     </li>
+                // );
 
-                dropdownContents.push(
-                    <li
-                        key='set_channel_purpose'
-                        role='presentation'
-                    >
-                        <button
-                            className='style--none'
-                            id='channelEditPurpose'
-                            role='menuitem'
-                            onClick={this.showEditChannelPurposeModal}
-                        >
-                            <FormattedMessage
-                                id='channel_header.setPurpose'
-                                defaultMessage='Edit Channel Purpose'
-                            />
-                        </button>
-                    </li>
-                );
+                // dropdownContents.push(
+                //     <li
+                //         key='set_channel_purpose'
+                //         role='presentation'
+                //     >
+                //         <button
+                //             className='style--none'
+                //             id='channelEditPurpose'
+                //             role='menuitem'
+                //             onClick={this.showEditChannelPurposeModal}
+                //         >
+                //             <FormattedMessage
+                //                 id='channel_header.setPurpose'
+                //                 defaultMessage='Edit Channel Purpose'
+                //             />
+                //         </button>
+                //     </li>
+                // );
 
-                dropdownContents.push(
-                    <li
-                        key='rename_channel'
-                        role='presentation'
-                    >
-                        <button
-                            className='style--none'
-                            id='channelRename'
-                            role='menuitem'
-                            onClick={this.showRenameChannelModal}
-                        >
-                            <FormattedMessage
-                                id='channel_header.rename'
-                                defaultMessage='Rename Channel'
-                            />
-                        </button>
-                    </li>
-                );
+                // dropdownContents.push(
+                //     <li
+                //         key='rename_channel'
+                //         role='presentation'
+                //     >
+                //         <button
+                //             className='style--none'
+                //             id='channelRename'
+                //             role='menuitem'
+                //             onClick={this.showRenameChannelModal}
+                //         >
+                //             <FormattedMessage
+                //                 id='channel_header.rename'
+                //                 defaultMessage='Rename Channel'
+                //             />
+                //         </button>
+                //     </li>
+                // );
             }
 
             if (ChannelUtils.showDeleteOptionForCurrentUser(channel, isChannelAdmin, isTeamAdmin, isSystemAdmin)) {
-                dropdownContents.push(
-                    <li
-                        key='delete_channel'
-                        role='presentation'
-                    >
-                        <ToggleModalButtonRedux
-                            id='channelDelete'
-                            role='menuitem'
-                            modalId={ModalIdentifiers.DELETE_CHANNEL}
-                            dialogType={DeleteChannelModal}
-                            dialogProps={{channel}}
-                        >
-                            <FormattedMessage
-                                id='channel_header.delete'
-                                defaultMessage='Delete Channel'
-                            />
-                        </ToggleModalButtonRedux>
-                    </li>
-                );
+                // dropdownContents.push(
+                //     <li
+                //         key='delete_channel'
+                //         role='presentation'
+                //     >
+                //         <ToggleModalButtonRedux
+                //             id='channelDelete'
+                //             role='menuitem'
+                //             modalId={ModalIdentifiers.DELETE_CHANNEL}
+                //             dialogType={DeleteChannelModal}
+                //             dialogProps={{channel}}
+                //         >
+                //             <FormattedMessage
+                //                 id='channel_header.delete'
+                //                 defaultMessage='Delete Channel'
+                //             />
+                //         </ToggleModalButtonRedux>
+                //     </li>
+                // );
             }
 
             if (!this.props.isDefault) {
-                dropdownContents.push(
-                    <li
-                        key='divider-3'
-                        className='divider'
-                    />
-                );
+                // dropdownContents.push(
+                //     <li
+                //         key='divider-3'
+                //         className='divider'
+                //     />
+                // );
 
-                dropdownContents.push(
-                    <li
-                        key='leave_channel'
-                        role='presentation'
-                    >
-                        <button
-                            className='style--none'
-                            id='channelLeave'
-                            role='menuitem'
-                            onClick={this.handleLeave}
-                        >
-                            <FormattedMessage
-                                id='channel_header.leave'
-                                defaultMessage='Leave Channel'
-                            />
-                        </button>
-                    </li>
-                );
+                // dropdownContents.push(
+                //     <li
+                //         key='leave_channel'
+                //         role='presentation'
+                //     >
+                //         <button
+                //             className='style--none'
+                //             id='channelLeave'
+                //             role='menuitem'
+                //             onClick={this.handleLeave}
+                //         >
+                //             <FormattedMessage
+                //                 id='channel_header.leave'
+                //                 defaultMessage='Leave Channel'
+                //             />
+                //         </button>
+                //     </li>
+                // );
             }
         }
 

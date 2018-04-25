@@ -204,7 +204,7 @@ export function createOffTopicIntroMessage(channel, centeredIntro) {
 
 export function createDefaultIntroMessage(channel, centeredIntro) {
     let teamInviteLink = null;
-    if (isCurrentUserPermitted(global.window.mm_config.RestrictTeamInvite)) {
+  /*  if (isCurrentUserPermitted(global.window.mm_config.RestrictTeamInvite)) {
         teamInviteLink = (
             <span
                 className='intro-links color--link cursor--pointer'
@@ -218,7 +218,7 @@ export function createDefaultIntroMessage(channel, centeredIntro) {
             </span>
         );
     }
-
+    */
     let setHeaderButton = createSetHeaderButton(channel);
     if (!showManagementOption(channel)) {
         setHeaderButton = null;
@@ -369,7 +369,7 @@ export function createStandardIntroMessage(channel, centeredIntro) {
 }
 
 function createInviteChannelMemberButton(channel, uiType) {
-    return (
+  /*  return (
         <ToggleModalButton
             className='intro-links color--link'
             dialogType={ChannelInviteModal}
@@ -385,10 +385,11 @@ function createInviteChannelMemberButton(channel, uiType) {
             />
         </ToggleModalButton>
     );
+    */
 }
 
 function createSetHeaderButton(channel) {
-    return (
+  /*  return (
         <ToggleModalButton
             className='intro-links color--link'
             dialogType={EditChannelHeaderModal}
@@ -401,6 +402,7 @@ function createSetHeaderButton(channel) {
             />
         </ToggleModalButton>
     );
+    */
 }
 
 function showManagementOption(channel) {

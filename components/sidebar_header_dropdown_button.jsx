@@ -11,7 +11,7 @@ import Constants from 'utils/constants.jsx';
 
 export default class SidebarHeaderDropdownButton extends React.PureComponent {
     static propTypes = {
-        bsRole: PropTypes.oneOf(['toggle']).isRequired, // eslint-disable-line react/no-unused-prop-types
+        //bsRole: PropTypes.oneOf(['toggle']).isRequired, // eslint-disable-line react/no-unused-prop-types
         onClick: PropTypes.func.isRequired
     };
 
@@ -37,7 +37,7 @@ export default class SidebarHeaderDropdownButton extends React.PureComponent {
                     className='sidebar-header-dropdown__toggle cursor--pointer style--none'
                     onClick={this.props.onClick}
                 >
-                    <MenuIcon className='sidebar-header-dropdown__icon'/>
+                    // <MenuIcon className='sidebar-header-dropdown__icon'/>
                 </button>
             </OverlayTrigger>
         );

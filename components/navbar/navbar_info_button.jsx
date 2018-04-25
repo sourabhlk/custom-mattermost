@@ -89,10 +89,6 @@ export default class NavbarInfoButton extends React.PureComponent {
                 rootClose={true}
             >
                 <div className='navbar-toggle navbar-right__icon navbar-info-button pull-right'>
-                    <InfoIcon
-                        className='icon icon__info'
-                        aria-hidden='true'
-                    />
                 </div>
             </OverlayTrigger>
         );

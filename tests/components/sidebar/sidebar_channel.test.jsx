@@ -57,8 +57,8 @@ describe('component/sidebar/sidebar_channel/SidebarChannel', () => {
         currentTeamName: 'current-team',
         currentUserId: 'user-id',
         showTutorialTip: false,
-        townSquareDisplayName: 'Town Square',
-        offTopicDisplayName: 'Off-Topic',
+        townSquareDisplayName: '',
+        offTopicDisplayName: '',
         membersCount: 8,
         actions: {
             savePreferences: jest.fn(),

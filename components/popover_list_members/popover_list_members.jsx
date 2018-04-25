@@ -196,22 +196,22 @@ export default class PopoverListMembers extends React.Component {
             if (this.props.channel.type !== Constants.GM_CHANNEL) {
                 let membersName = (
                     <FormattedMessage
-                        id='members_popover.manageMembers'
-                        defaultMessage='Manage Members'
+                        id='members_popover.viewMembers'
+                        defaultMessage='View Members'
                     />
                 );
 
                 const manageMembers = canManageMembers(this.props.channel, isChannelAdmin, isTeamAdmin, isSystemAdmin);
                 const isDefaultChannel = ChannelStore.isDefault(this.props.channel);
 
-                if ((manageMembers === false && isDefaultChannel === false) || isDefaultChannel) {
+              /*  if ((manageMembers === false && isDefaultChannel === false) || isDefaultChannel) {
                     membersName = (
                         <FormattedMessage
                             id='members_popover.viewMembers'
                             defaultMessage='View Members'
                         />
                     );
-                }
+                } */
 
                 popoverButton = (
                     <div

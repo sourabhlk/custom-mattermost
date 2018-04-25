@@ -619,53 +619,53 @@ export default class SidebarHeaderDropdown extends React.Component {
             logoutDivider = <li className='divider'/>;
         }
 
-        return (
-            <Dropdown
-                id='sidebar-header-dropdown'
-                open={this.state.showDropdown}
-                onToggle={this.toggleDropdown}
-                className='sidebar-header-dropdown'
-                pullRight={true}
-            >
-                <SidebarHeaderDropdownButton
-                    bsRole='toggle'
-                    onClick={this.toggleDropdown}
-                />
-                <Dropdown.Menu id='sidebarDropdownMenu'>
-                    {accountSettings}
-                    {inviteDivider}
-                    {inviteLink}
-                    {teamLink}
-                    {addMemberToTeam}
-                    {teamDivider}
-                    {teamSettings}
-                    {manageLink}
-                    {teams}
-                    {backstageDivider}
-                    {integrationsLink}
-                    {customEmoji}
-                    {sysAdminDivider}
-                    {sysAdminLink}
-                    {helpDivider}
-                    {helpLink}
-                    {keyboardShortcuts}
-                    {reportLink}
-                    {nativeAppLink}
-                    {about}
-                    {logoutDivider}
-                    {logout}
-                    {teamMembersModal}
-                    <TeamSettingsModal
-                        show={this.state.showTeamSettingsModal}
-                        onModalDismissed={this.hideTeamSettingsModal}
-                    />
-                    <AboutBuildModal
-                        show={this.state.showAboutModal}
-                        onModalDismissed={this.aboutModalDismissed}
-                    />
-                    {addUsersToTeamModal}
-                </Dropdown.Menu>
-            </Dropdown>
-        );
+        return (<div />);
+            // <Dropdown
+            //     id='sidebar-header-dropdown'
+            //     open={this.state.showDropdown}
+            //     onToggle={this.toggleDropdown}
+            //     className='sidebar-header-dropdown'
+            //     pullRight={true}
+            // >
+            //     <SidebarHeaderDropdownButton
+            //         bsRole='toggle'
+            //         onClick={this.toggleDropdown}
+            //     />
+            //     <Dropdown.Menu id='sidebarDropdownMenu'>
+            //         {accountSettings}
+            //         {inviteDivider}
+            //         {inviteLink}
+            //         {teamLink}
+            //         {addMemberToTeam}
+            //         {teamDivider}
+            //         {teamSettings}
+            //         {manageLink}
+            //         {teams}
+            //         {backstageDivider}
+            //         {integrationsLink}
+            //         {customEmoji}
+            //         {sysAdminDivider}
+            //         {sysAdminLink}
+            //         {helpDivider}
+            //         {helpLink}
+            //         {keyboardShortcuts}
+            //         {reportLink}
+            //         {nativeAppLink}
+            //         {about}
+            //         {logoutDivider}
+            //         {logout}
+            //         {teamMembersModal}
+            //         <TeamSettingsModal
+            //             show={this.state.showTeamSettingsModal}
+            //             onModalDismissed={this.hideTeamSettingsModal}
+            //         />
+            //         <AboutBuildModal
+            //             show={this.state.showAboutModal}
+            //             onModalDismissed={this.aboutModalDismissed}
+            //         />
+            //         {addUsersToTeamModal}
+            //     </Dropdown.Menu>
+            // </Dropdown>
+
     }
 }

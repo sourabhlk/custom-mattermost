@@ -46,7 +46,7 @@ function mapStateToProps(state) {
 
     if (showUnreadSection) {
         publicChannelIds = getSortedPublicChannelIds(state, keepChannelIdAsUnread);
-        privateChannelIds = getSortedPrivateChannelIds(state, keepChannelIdAsUnread);
+        privateChannelIds = getSortedPublicChannelIds(state, keepChannelIdAsUnread);
         favoriteChannelIds = getSortedFavoriteChannelIds(state, keepChannelIdAsUnread);
         directAndGroupChannelIds = getSortedDirectChannelIds(state, keepChannelIdAsUnread);
     } else {

@@ -54,19 +54,6 @@ export default class ChannelMembersModal extends React.PureComponent {
                                 defaultMessage=' Members'
                             />
                         </Modal.Title>
-                        {this.props.canManageChannelMembers &&
-                            <a
-                                id='showInviteModal'
-                                className='btn btn-md btn-primary'
-                                href='#'
-                                onClick={this.onClickManageChannelsButton}
-                            >
-                                <FormattedMessage
-                                    id='channel_members_modal.addNew'
-                                    defaultMessage=' Add New Members'
-                                />
-                            </a>
-                        }
                     </Modal.Header>
                     <Modal.Body>
                         <MemberListChannel

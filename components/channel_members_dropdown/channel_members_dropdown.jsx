@@ -126,7 +126,7 @@ export default class ChannelMembersDropdown extends React.Component {
             let role = (
                 <FormattedMessage
                     id='channel_members_dropdown.channel_member'
-                    defaultMessage='Channel Member'
+                    defaultMessage=''
                 />
             );
 
@@ -140,23 +140,23 @@ export default class ChannelMembersDropdown extends React.Component {
             }
 
             let removeFromChannel = null;
-            if (this.canRemoveMember() && this.props.channel.name !== Constants.DEFAULT_CHANNEL) {
-                removeFromChannel = (
-                    <li role='presentation'>
-                        <a
-                            id='removeFromChannel'
-                            role='menuitem'
-                            href='#'
-                            onClick={this.handleRemoveFromChannel}
-                        >
-                            <FormattedMessage
-                                id='channel_members_dropdown.remove_from_channel'
-                                defaultMessage='Remove From Channel'
-                            />
-                        </a>
-                    </li>
-                );
-            }
+            // if (this.canRemoveMember() && this.props.channel.name !== Constants.DEFAULT_CHANNEL) {
+            //     removeFromChannel = (
+            //         <li role='presentation'>
+            //             <a
+            //                 id='removeFromChannel'
+            //                 role='menuitem'
+            //                 href='#'
+            //                 onClick={this.handleRemoveFromChannel}
+            //             >
+            //                 <FormattedMessage
+            //                     id='channel_members_dropdown.remove_from_channel'
+            //                     defaultMessage='Remove From Channel'
+            //                 />
+            //             </a>
+            //         </li>
+            //     );
+            // }
 
             let makeChannelMember = null;
             if (isChannelAdmin) {
@@ -170,7 +170,7 @@ export default class ChannelMembersDropdown extends React.Component {
                         >
                             <FormattedMessage
                                 id='channel_members_dropdown.make_channel_member'
-                                defaultMessage='Make Channel Member'
+                                defaultMessage=''
                             />
                         </a>
                     </li>
@@ -215,7 +215,6 @@ export default class ChannelMembersDropdown extends React.Component {
                         >
                             {makeChannelMember}
                             {makeChannelAdmin}
-                            {removeFromChannel}
                         </ul>
                         {serverError}
                     </div>
@@ -223,22 +222,22 @@ export default class ChannelMembersDropdown extends React.Component {
             }
         }
 
-        if (this.canRemoveMember() && this.props.channel.name !== Constants.DEFAULT_CHANNEL) {
-            return (
-                <button
-                    id='removeMember'
-                    type='button'
-                    className='btn btn-danger btn-message'
-                    onClick={this.handleRemoveFromChannel}
-                    disabled={this.state.removing}
-                >
-                    <FormattedMessage
-                        id='channel_members_dropdown.remove_member'
-                        defaultMessage='Remove Member'
-                    />
-                </button>
-            );
-        }
+        // if (this.canRemoveMember() && this.props.channel.name !== Constants.DEFAULT_CHANNEL) {
+        //     return (
+        //         <button
+        //             id='removeMember'
+        //             type='button'
+        //             className='btn btn-danger btn-message'
+        //             onClick={this.handleRemoveFromChannel}
+        //             disabled={this.state.removing}
+        //         >
+        //             <FormattedMessage
+        //                 id='channel_members_dropdown.remove_member'
+        //                 defaultMessage='Remove Member'
+        //             />
+        //         </button>
+        //     );
+        // }
 
         if (isChannelAdmin) {
             if (this.props.channel.name === Constants.DEFAULT_CHANNEL) {
@@ -267,7 +266,7 @@ export default class ChannelMembersDropdown extends React.Component {
             <div>
                 <FormattedMessage
                     id='channel_members_dropdown.channel_member'
-                    defaultMessage='Channel Member'
+                    defaultMessage=''
                 />
             </div>
         );
